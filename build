@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export CC=/home/workspace/program-files/arago-2017.06/sysroots/x86_64-arago-linux/usr/bin/arm-linux-gnueabihf-gcc
+
+#export CC=/home/workspace/program-files/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
+./configure --prefix=/home/workspace/rootfs/usr --exec-prefix=/home/workspace/rootfs/usr --host=arm-linux-gnueabihf --with-zlib=/home/workspace/rootfs/usr
+make SCPPROGRESS=1
+make install
